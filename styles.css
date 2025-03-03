@@ -28,17 +28,20 @@ h2 {
     z-index: 2;
 }
 
+/* Enhanced navigation bar */
 nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgba(51, 51, 51, 0.8);
-    position: fixed; /* Make the nav bar fixed */
-    z-index: 2;
-    padding: 10px 0; /* Add padding for better spacing */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    top: 0; /* Ensure the nav bar is flush with the top */
-    left: 0; /* Ensure the nav bar is flush with the left */
+    background-color: rgba(25, 25, 25, 0.9);
+    position: fixed;
+    z-index: 10;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 nav ul {
@@ -46,25 +49,48 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
-    padding: 10px 15px; /* Add padding for better spacing */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 1em;
+    padding: 12px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 nav ul li a:hover {
-    background-color: rgba(140, 21, 21, 0.8); /* Change background color on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    text-decoration: none; /* Remove underline on hover */
+    background-color: rgba(140, 21, 21, 0.9);
+    transform: translateY(-3px);
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(140, 21, 21, 0.3);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #8C1515;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 70%;
 }
 
 .video-container { /* Updated class name to match HTML */
@@ -212,36 +238,44 @@ nav ul li a:hover {
 }
 
 .copy-button {
-    background-color: #ccc; /* Grey background */
-    border: none; /* Remove border */
-    color: black; /* Black text */
-    padding: 3px 7px; /* Adjust padding to make it smaller */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make the button inline-block */
-    font-size: 0.7em; /* Set font size to 70% */
-    margin: 5px 2px; /* Add some margin */
-    cursor: pointer; /* Add pointer cursor on hover */
-    border-radius: 5px; /* Add rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-.copy-button .fa {
-    transition: color 0.3s ease; /* Smooth transition for color */
-}
-
-.copy-button .fa.copied {
-    color: #8C1515 !important; /* Stanford red color when copied */
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
 }
 
 .copy-button:hover {
-    background-color: #bbb; /* Darker grey on hover */
+    background-color: #8C1515;
+    color: white;
+    border-color: #8C1515;
+}
+
+.copy-button .fa {
+    transition: all 0.3s ease;
+}
+
+.copy-button:hover .fa {
+    color: white;
+}
+
+.copy-button .fa.copied {
+    color: #8C1515 !important;
 }
 
 .status-bubble {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     margin-left: 5px;
 }
@@ -267,4 +301,195 @@ nav ul li a:hover {
 #serverInfo ul li {
     display: inline-block; /* Display list items inline */
     margin: 0 5px; /* Add some margin between items */
+}
+
+/* Enhanced server connection cards */
+.server-info-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .server-info-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card.centered-card.connection-info {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 0;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    border: none;
+    border-top: 3px solid #8C1515;
+    max-width: none;
+}
+
+.card.centered-card.connection-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 8px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card.centered-card#serverInfoCard {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 0;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    border: none;
+    border-top: 3px solid #8C1515;
+    max-width: none;
+}
+
+.card.centered-card#serverInfoCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 8px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    color: #333;
+    font-size: 1.6em;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.card h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #8C1515;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.connection-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 10px 12px;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: none;
+    border-left: 2px solid #8C1515;
+}
+
+.connection-detail:hover {
+    background-color: #f0f0f0;
+}
+
+.connection-detail span {
+    font-weight: bold;
+    color: #333;
+    min-width: 110px;
+}
+
+.connection-detail code {
+    background-color: transparent;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    flex-grow: 1;
+    text-align: center;
+    color: #8C1515;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1em;
+    border: none;
+}
+
+.server-status {
+    text-align: left;
+    padding: 0.8rem;
+    background-color: transparent;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-size: 0.95em;
+}
+
+.last-checked {
+    color: #888;
+    font-size: 0.8em;
+    margin-top: 0.8rem;
+    text-align: right;
+    font-style: italic;
+}
+
+.title-image {
+    display: block;
+    margin: 0 auto;
+    width: 20%; /* Reduced from 25% */
+    padding: 10px;
+    max-width: 300px; /* Reduced from 400px */
+}
+
+/* Update content spacing */
+.content-wrapper {
+    padding-top: 60px;
+}
+
+/* Enhanced server status styles */
+.player-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.player-name {
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: #333;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+.player-name:hover {
+    background: #8C1515;
+    color: white;
+    border-color: #8C1515;
+    transform: translateY(-2px);
+}
+
+.server-info-group {
+    background: #f8f8f8;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px 0;
+    border-left: 2px solid #8C1515;
+}
+
+.server-info-group p {
+    margin: 6px 0;
+}
+
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.server-version {
+    color: #666;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
 }

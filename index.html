@@ -4,112 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OHSMP</title>
+    <meta name="description" content="Official Minecraft Server for Stanford Online High School">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="ohsmpLOGO.jfif" type="image/jfif"> <!-- Add favicon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Add Font Awesome -->
+    <link rel="icon" href="ohsmpLOGO.jfif" type="image/jfif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="video-container"> <!-- Ensure class name matches CSS -->
-        <video class="video-background" muted loop id="backgroundVideo"> <!-- Set playback speed -->
+    <div class="video-container">
+        <video class="video-background" muted loop id="backgroundVideo">
             <source src="video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="pages/announcements.html">Announcements</a></li>
             <li><a href="pages/rules.html">Rules</a></li>
             <li><a href="pages/whitelist.html">Whitelist</a></li>
             <li><a href="pages/about.html">About</a></li>
-            <li><a href="pages/gallery.html">Gallery</a></li> <!-- Added Gallery option -->
-            <li><a href="pages/more.html">More</a></li>
         </ul>
     </nav>
-    <img src="ohsmp_title_render.png" alt="OHSMP Title" style="display: block; margin: 0 auto; width: 25%; padding: 10px;"> <!-- Make image slightly smaller and add padding -->
-    <h2>The Official Minecraft Server of Stanford Online High School</h2>
-    <div class="card centered-card">
-        <h2>IP: <code id="ip">play.ohsmp.com</code> <button class="copy-button" onclick="copyToClipboard('ip', this)"><i class="fa fa-clipboard"></i></button></h2>
-        <h3>Direct Connection: <code id="directConnection">172.240.13.165:25702</code> <button class="copy-button" onclick="copyToClipboard('directConnection', this)"><i class="fa fa-clipboard"></i></button></h3> <!-- Added direct connection -->
-    </div>
-    <div class="card centered-card" id="serverInfoCard">
-        <h2>Live Server Status</h2>
-        <div id="serverInfo"></div>
-        <p id="lastChecked"></p>
-    </div>
-    <script src="script.js"></script> <!-- Include the script -->
-    <script>
-    function copyToClipboard(elementId, button) {
-        var copyText = document.getElementById(elementId).textContent;
-        navigator.clipboard.writeText(copyText).then(function() {
-            button.querySelector('i').classList.add('copied');
-            button.querySelector('i').style.color = '#8C1515'; // Change color to Stanford red
-            setTimeout(function() {
-                button.querySelector('i').classList.remove('copied');
-                button.querySelector('i').style.color = ''; // Reset color
-            }, 2000);
-        }, function(err) {
-            console.error('Could not copy text: ', err);
-        });
-    }
 
-    const serverIp = '172.240.13.165:25702';
-    const apiUrl = `https://api.mcsrvstat.us/2/${serverIp}`;
-    let lastCheckedTime = Date.now();
+    <main class="content-wrapper">
+        <img src="ohsmp_title_render.png" alt="OHSMP Title" class="title-image">
+        <h2>Stanford Online High School Minecraft Server</h2>
 
-    function checkServerStatus() {
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Server not found');
-                }
-                return response.json();
-            })
-            .then(data => {
-                const serverInfo = document.getElementById('serverInfo');
-                try {
-                    serverInfo.innerHTML = `
-                        <p><strong>Online:</strong> <span class="status-bubble ${data.online ? 'status-online' : 'status-offline'}"></span></p>
-                        <p><strong>Players:</strong> <span>${data.players.online} / ${data.players.max}</span></p>
-                        ${data.players && data.players.list && data.players.list.length > 0 ? `
-                            <p><strong>Online Players:</strong></p>
-                            <ul>
-                                ${data.players.list.map(player => `<li>${player}</li>`).join('')}
-                            </ul>
-                        ` : '<p>No players online.</p>'}
-                        <p><strong>Version:</strong> <span>${data.version}</span></p>
-                        <p><strong>Motd:</strong> <span>${data.motd.clean.join('<br>')}</span></p>
-                        ${data.software ? `<p><strong>Server Type:</strong> <span>${data.software}</span></p>` : ''}
-                        ${data.plugins ? `<p><strong>Plugins:</strong> <span>${data.plugins.names.join(', ')}</span></p>` : ''}
-                        ${data.mods ? `<p><strong>Mods:</strong> <span>${data.mods.names.join(', ')}</span></p>` : ''}
-                    `;
-                } catch (error) {
-                    serverInfo.innerHTML = `<p style="color: red;">Server is offline.</p>`;
-                }
+        <section class="server-info-section">
+            <div class="card centered-card connection-info">
+                <h2>Connection Details</h2>
+                <div class="connection-detail">
+                    <span>IP:</span>
+                    <code id="ip">play.ohsmp.com</code>
+                    <button class="copy-button" data-copy-target="ip">
+                        <i class="fa fa-clipboard"></i>
+                    </button>
+                </div>
+                <div class="connection-detail">
+                    <span>Direct:</span>
+                    <code id="directConnection">172.240.13.165:25702</code>
+                    <button class="copy-button" data-copy-target="directConnection">
+                        <i class="fa fa-clipboard"></i>
+                    </button>
+                </div>
+            </div>
 
-                lastCheckedTime = Date.now();
-                updateLastChecked();
-            })
-            .catch(error => {
-                document.getElementById('serverInfo').innerHTML = `<p style="color: red;">Server is offline.</p>`;
-            });
-    }
+            <div class="card centered-card" id="serverInfoCard">
+                <h2>Server Status</h2>
+                <div id="serverInfo" class="server-status">
+                    <p>Loading server information...</p>
+                </div>
+                <p id="lastChecked" class="last-checked"></p>
+            </div>
+        </section>
+    </main>
 
-    function updateLastChecked() {
-        const now = Date.now();
-        const secondsSinceLastCheck = Math.floor((now - lastCheckedTime) / 1000);
-        document.getElementById('lastChecked').innerText = `Last checked: ${secondsSinceLastCheck} seconds ago`;
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        checkServerStatus();
-        setInterval(() => {
-            checkServerStatus();
-            updateLastChecked();
-        }, 5000);
-    });
-
-    setInterval(updateLastChecked, 1000);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
