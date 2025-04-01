@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OHSMP - Whitelist</title>
+    <meta name="description" content="OHSMP Server Whitelist">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../ohsmpLOGO.jfif" type="image/jfif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add Marked.js for markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="video-container">
+        <video class="video-background" muted loop id="backgroundVideo">
+            <source src="../video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="whitelist.html">Whitelist</a></li>
+        </ul>
+    </nav>
+    
+    <main class="content-wrapper">
+        <img src="../ohsmp_title_render.png" alt="OHSMP Title" class="title-image">
+        <h2>Server Whitelist</h2>
+        
+        <section class="rules-section">
+            <div class="card centered-card" id="rulesCard">
+                <h2>Player Directory</h2>
+                <div class="markdown-container" id="markdown-container">
+                    <div class="loading-container">
+                        <p>Loading whitelist...</p>
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

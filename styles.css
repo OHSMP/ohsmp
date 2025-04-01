@@ -1,0 +1,730 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: block;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    padding-top: 5vh;
+    overflow: auto;
+    color: #333;
+}
+
+h1 {
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced navigation bar */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(25, 25, 25, 0.9);
+    position: fixed;
+    z-index: 10;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 18px 30px;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background-color: rgba(140, 21, 21, 0.9);
+    transform: translateY(-3px);
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(140, 21, 21, 0.3);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #8C1515;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 70%;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Add video play button styling */
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.video-play-button:hover {
+    background: rgba(140,21,21,0.8);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-play-button i {
+    font-size: 40px;
+}
+
+/* Generic card styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-top: 2px solid #8C1515;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 8px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2, .card h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin: 10px 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.card h2::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #8C1515;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.centered-card {
+    text-align: center;
+}
+
+/* Copy button styling */
+.copy-button {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #666;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75em;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+    background-color: #8C1515;
+    color: white;
+    border-color: #8C1515;
+}
+
+.copy-button .fa {
+    transition: all 0.3s ease;
+}
+
+.copy-button:hover .fa {
+    color: white;
+}
+
+.copy-button .fa.copied {
+    color: #8C1515 !important;
+}
+
+/* Server status indicators */
+.status-bubble {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.status-online {
+    background-color: #4caf50;
+    box-shadow: 0 0 8px #4caf50;
+}
+
+.status-offline {
+    background-color: #f44336;
+    box-shadow: 0 0 8px #f44336;
+}
+
+#serverInfo {
+    text-align: center;
+}
+
+/* Enhance the server status styling */
+.server-status {
+    padding: 15px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.last-checked {
+    font-style: italic;
+    color: #888;
+    font-size: 0.8em;
+    margin-top: 15px;
+}
+
+/* Content wrapper */
+.content-wrapper {
+    padding-top: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.title-image {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    padding: 8px;
+    max-width: 30%;
+    height: auto;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.title-image:hover {
+    transform: scale(1.05);
+}
+
+/* Server info section */
+.server-info-section {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .server-info-section {
+        grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+    }
+}
+
+/* Connection details styling */
+.connection-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 0.8rem 0;
+    padding: 8px 12px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-left: 2px solid #8C1515;
+}
+
+.connection-detail:hover {
+    background-color: #f0f0f0;
+}
+
+.connection-detail span {
+    font-weight: bold;
+    color: #333;
+    min-width: 60px;
+    font-size: 0.9em;
+}
+
+.connection-detail code {
+    background-color: transparent;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    flex-grow: 1;
+    text-align: center;
+    color: #8C1515;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 0.95em;
+    border: none;
+}
+
+/* Rules section styling */
+.rules-section {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    padding: 0;
+}
+
+.card#rulesCard {
+    max-width: none;
+    background-color: rgba(255, 255, 255, 0.97);
+    padding: 1.5rem;
+}
+
+/* Simplified markdown styling */
+.markdown-container {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.markdown-container h1, .markdown-container h2, .markdown-container h3 {
+    color: #333;
+    margin: 1.5rem 0 1rem;
+    text-align: left;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.markdown-container h1 {
+    font-size: 1.8em;
+}
+
+.markdown-container h2 {
+    font-size: 1.5em;
+}
+
+.markdown-container h3 {
+    font-size: 1.2em;
+}
+
+.markdown-container p {
+    color: #333;
+    line-height: 1.6;
+    margin: 0.8rem 0;
+}
+
+.markdown-container ul, .markdown-container ol {
+    padding-left: 20px;
+    margin: 0.8rem 0;
+}
+
+.markdown-container li {
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.markdown-container code {
+    background-color: #f4f4f4;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #8C1515;
+    font-size: 0.9em;
+}
+
+.markdown-container pre {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1rem 0;
+    border-left: 3px solid #8C1515;
+}
+
+.markdown-container strong {
+    color: #8C1515;
+    font-weight: bold;
+}
+
+.markdown-container a {
+    color: #8C1515;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px dotted #8C1515;
+}
+
+.markdown-container a:hover {
+    color: #600e0e;
+    border-bottom: 1px solid #600e0e;
+}
+
+/* Simplified loading indicator */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(140, 21, 21, 0.3);
+    border-radius: 50%;
+    border-top-color: #8C1515;
+    animation: spin 1s ease-in-out infinite;
+    margin: 1rem 0;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Animation for markdown elements */
+.animated-element {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Strong text emphasis */
+.markdown-container strong {
+    color: #8C1515;
+    font-weight: bold;
+}
+
+/* Links styling */
+.markdown-container a {
+    color: #8C1515;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-bottom: 1px dotted #8C1515;
+}
+
+.markdown-container a:hover {
+    color: #600e0e;
+    border-bottom: 1px solid #600e0e;
+}
+
+/* Player list styling */
+.player-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.player-name {
+    display: inline-block;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 15px;
+    margin: 3px;
+    transition: all 0.2s ease;
+    font-size: 0.9em;
+    border: 1px solid #eaeaea;
+}
+
+.player-name:hover {
+    background-color: #8C1515;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+.server-info-group {
+    background: #f8f8f8;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 8px 0;
+    border-left: 2px solid #8C1515;
+}
+
+.server-info-group p {
+    margin: 6px 0;
+}
+
+/* Enhanced whitelist styling - simplified and cleaner */
+.whitelist-toc {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.whitelist-toc h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.whitelist-toc ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    gap: 12px;
+}
+
+.whitelist-toc li {
+    margin: 0;
+}
+
+.whitelist-toc a {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: transparent;
+    border-radius: 4px;
+    color: #8C1515;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.whitelist-toc a:hover {
+    background-color: #f5f5f5;
+    transform: none;
+    text-decoration: underline;
+}
+
+.whitelist-search {
+    display: flex;
+    margin-bottom: 30px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.whitelist-search input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.whitelist-search input:focus {
+    border-color: #8C1515;
+}
+
+.whitelist-search button {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.whitelist-search button:hover {
+    background-color: #e5e5e5;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.player-card {
+    background-color: transparent;
+    padding: 8px 4px;
+    transition: all 0.2s ease;
+    border: none;
+    border-bottom: 1px dotted #eaeaea;
+}
+
+.player-card:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: rgba(248, 248, 248, 0.5);
+}
+
+.player-username {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3px;
+}
+
+.player-info {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #eaeaea;
+    margin: 25px 0;
+}
+
+.highlight-match {
+    animation: gentlePulse 1.5s ease;
+}
+
+.highlight-section {
+    animation: gentleHighlight 1.5s ease;
+}
+
+@keyframes gentlePulse {
+    0% { background-color: transparent; }
+    50% { background-color: rgba(248, 248, 248, 0.7); }
+    100% { background-color: transparent; }
+}
+
+@keyframes gentleHighlight {
+    0% { background-color: transparent; }
+    30% { background-color: rgba(248, 248, 248, 0.7); }
+    100% { background-color: transparent; }
+}
+
+.faction-header {
+    background-color: transparent;
+    padding: 8px 0;
+    margin: 20px 0 10px;
+    border-bottom: 1px solid #eaeaea;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Mobile responsiveness for whitelist */
+@media (max-width: 768px) {
+    .whitelist-toc ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .players-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* Mobile responsiveness for whitelist */
+@media (max-width: 768px) {
+    .whitelist-toc ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .players-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .title-image {
+        width: 150px;
+        margin: 15px auto;
+    }
+    
+    nav ul li a {
+        padding: 15px 20px;
+        font-size: 0.9em;
+    }
+    
+    h2 {
+        font-size: 1.1em;
+    }
+    
+    .card {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

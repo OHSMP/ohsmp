@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OHSMP</title>
+    <meta name="description" content="The Official Minecraft Server of Stanford Online High School">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="ohsmpLOGO.jfif" type="image/jfif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="video-container">
+        <video class="video-background" muted loop id="backgroundVideo">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/rules.html">Rules</a></li>
+            <li><a href="pages/whitelist.html">Whitelist</a></li>
+        </ul>
+    </nav>
+    
+    <main class="content-wrapper">
+        <img src="ohsmp_title_render.png" alt="OHSMP Title" class="title-image">
+        <h2>The Official Minecraft Server of Stanford Online High School</h2>
+        
+        <section class="server-info-section">
+            <div class="card centered-card connection-info">
+                <h2>Connect</h2>
+                <div class="connection-detail">
+                    <span>IP:</span>
+                    <code id="ip">play.ohsmp.com</code>
+                    <button class="copy-button" data-copy-target="ip">
+                        <i class="fa fa-clipboard"></i>
+                    </button>
+                </div>
+                <div class="connection-detail">
+                    <span>Direct:</span>
+                    <code id="directConnection">172.240.13.165:25702</code>
+                    <button class="copy-button" data-copy-target="directConnection">
+                        <i class="fa fa-clipboard"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card centered-card" id="serverInfoCard">
+                <h2>Status</h2>
+                <div id="serverInfo" class="server-status">
+                    <p>Loading server information...</p>
+                </div>
+                <p id="lastChecked" class="last-checked"></p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+    <script>
+    const serverIp = '172.240.13.165:25702';
+    const apiUrl = `https://api.mcsrvstat.us/2/${serverIp}`;
+    let lastCheckedTime = Date.now();
+
+    function checkServerStatus() {
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Server not found');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const serverInfo = document.getElementById('serverInfo');
+                try {
+                    const playersList = data.players?.list?.length > 0 
+                        ? `<div class="player-list">
+                             ${data.players.list.map(player => `<span class="player-name">${player}</span>`).join('')}
+                           </div>`
+                        : '<p>No players online.</p>';
+                    
+                    serverInfo.innerHTML = `
+                        <div class="server-info-group">
+                            <p class="status-indicator">
+                                <strong>Status:</strong> 
+                                <span class="status-bubble ${data.online ? 'status-online' : 'status-offline'}"></span>
+                                <span>${data.online ? 'Online' : 'Offline'}</span>
+                            </p>
+                            <p><strong>Players:</strong> ${data.players.online} / ${data.players.max}</p>
+                        </div>
+                        <div class="server-info-group">
+                            ${playersList}
+                        </div>
+                        <div class="server-info-group">
+                            <p><strong>Version:</strong> <span class="server-version">${data.version}</span></p>
+                        </div>
+                    `;
+                } catch (error) {
+                    serverInfo.innerHTML = `
+                        <div class="server-info-group">
+                            <p class="status-offline">Server is offline</p>
+                        </div>
+                    `;
+                }
+
+                lastCheckedTime = Date.now();
+                updateLastChecked();
+            })
+            .catch(error => {
+                document.getElementById('serverInfo').innerHTML = `
+                    <div class="server-info-group">
+                        <p class="status-offline">Server is offline</p>
+                    </div>
+                `;
+            });
+    }
+
+    function updateLastChecked() {
+        const now = Date.now();
+        const secondsSinceLastCheck = Math.floor((now - lastCheckedTime) / 1000);
+        document.getElementById('lastChecked').innerText = `Last checked: ${secondsSinceLastCheck} seconds ago`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        checkServerStatus();
+        setInterval(() => {
+            checkServerStatus();
+        }, 5000);
+        setInterval(updateLastChecked, 1000);
+    });
+    </script>
+</body>
+</html>
