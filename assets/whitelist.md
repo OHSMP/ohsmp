@@ -1,213 +1,110 @@
 # OHSMP Whitelist 2025
 
-**Support Forum**
+### Whitelisted Players
+- **<span style="color:#8C1515;">NexoBuilder09</span>:** William G
+- **<span style="color:#8C1515;">Wildere</span>:** Greyson W
+- **<span style="color:#8C1515;">NMMBS</span>:** Andrew
+- **<span style="color:#8C1515;">QuietStorm15</span>:** Shen
+- **<span style="color:#8C1515;">RevengeNM</span>:** Nathan M
+- **<span style="color:#8C1515;">DreadfireX</span>:** Alexander B
+- **<span style="color:#8C1515;">MrSpots</span>:** Taylan D
+- **<span style="color:#8C1515;">CageistSplash94</span>:** Jasper 
+- **<span style="color:#8C1515;">Pumpkin345</span>:** Julie W    
+- **<span style="color:#8C1515;">goattchamp</span>:** Tariq C
+- **<span style="color:#8C1515;">Antony926</span>:** Wynn L
+- **<span style="color:#8C1515;">Rayik_</span>:** Amari I
+- **<span style="color:#8C1515;">Chapter7840</span>:** Jasmine N
+- **<span style="color:#8C1515;">Automationman</span>:** Henry H
+- **<span style="color:#8C1515;">BlueBlock314</span>:** Tristan S
+- **<span style="color:#8C1515;">Jroid27</span>:** Jules M
+- **<span style="color:#8C1515;">LordChumba257</span>:** Paul E
+- **<span style="color:#8C1515;">pauldonket</span>:** Paul E
+- **<span style="color:#8C1515;">NatTheBag</span>:** Han L
+- **<span style="color:#8C1515;">GreenAnimal6000</span>:** Julian S
+- **<span style="color:#8C1515;">BATTLECHIKEN</span>:** Grady S
+- **<span style="color:#8C1515;">aapianist</span>:** Annabella
+- **<span style="color:#8C1515;">LordTechnodoggo</span>:** Jonathan
+- **<span style="color:#8C1515;">Flyingsaber</span>:** Siddarth 
+- **<span style="color:#8C1515;">Fazemacandchees</span>:** Kavin K
+- **<span style="color:#8C1515;">The_Blueberry_</span>:** Bobby W
+- **<span style="color:#8C1515;">Logbal_</span>:** Maxwell P
+- **<span style="color:#8C1515;">Cheemsforbeems</span>:** Johann W
+- **<span style="color:#8C1515;">Droffilc314</span>:** Clifford M
+- **<span style="color:#8C1515;">LunarWolf9530</span>:** Meera I
+- **<span style="color:#8C1515;">Starshine_Storm</span>:** Sophia M
+- **<span style="color:#8C1515;">Kendrick_LeBard</span>:** Arin P
+- **<span style="color:#8C1515;">The_Duck_King_</span>:** Leonid V
+- **<span style="color:#8C1515;">X839</span>:** Amaru W 
+- **<span style="color:#8C1515;">TheZardian</span>:** Ariel M
+- **<span style="color:#8C1515;">tigeryong10</span>:** Weston Y
+- **<span style="color:#8C1515;">luckytimeteller</span>:** Rohan R
+- **<span style="color:#8C1515;">JuniorCrafter10</span>:** Aurora G
+- **<span style="color:#8C1515;">IroWiz</span>:** Ethan I
+- **<span style="color:#8C1515;">HealthyCloud</span>:** Ken Y
+- **<span style="color:#8C1515;">AlexJutsu12</span>:** Alex
+- **<span style="color:#8C1515;">Tigerseyemax1</span>:** Daniel B
+- **<span style="color:#8C1515;">FluffyCloud12</span>:** C.B
+- **<span style="color:#8C1515;">QuionaPro73</span>:** Palma B
+- **<span style="color:#8C1515;">Spring1962</span>:** Sophia T
+- **<span style="color:#8C1515;">FireForestDrago</span>:** Karthik V
+- **<span style="color:#8C1515;">Viladdi</span>:** Maddie L 
+- **<span style="color:#8C1515;">CoogaCo</span>:** Kyler G
+- **<span style="color:#8C1515;">Vision84</span>:** Arnav B
+- **<span style="color:#8C1515;">ElvenRayla</span>:** Izzy N
+- **<span style="color:#8C1515;">HummusAndGuac</span>:** Harmehel S
+- **<span style="color:#8C1515;">TheEnderPlague</span>:** Francisco M
+- **<span style="color:#8C1515;">Brokii_official</span>:** Dawn Z
+- **<span style="color:#8C1515;">MinerHalo</span>:** Lila S
+- **<span style="color:#8C1515;">Avaloby108</span>:** Mateus A
+- **<span style="color:#8C1515;">azanide</span>:** Josh T
+- **<span style="color:#8C1515;">Pentaria55</span>:** Michael D
+- **<span style="color:#8C1515;">Di4rm4d4</span>:** Diana M
+- **<span style="color:#8C1515;">Crafter100185</span>:** Torah H
+- **<span style="color:#8C1515;">Exeptiomal</span>:** Alexander S
+- **<span style="color:#8C1515;">RipFinnick</span>:** Patrick T
+- **<span style="color:#8C1515;">matchboxes</span>:** Wika S
+- **<span style="color:#8C1515;">SEANWY</span>:** Sean T
+- **<span style="color:#8C1515;">TGM_151</span>:** Shan J
+- **<span style="color:#8C1515;">literallyM3L</span>:** Melanie Q
+- **<span style="color:#8C1515;">Ciniminio</span>:** Nico H
+- **<span style="color:#8C1515;">NatKrippled</span>:** Natalie K 
+- **<span style="color:#8C1515;">Shreyyyyuh</span>:** Sherri L
+- **<span style="color:#8C1515;">Infallibilism</span>:** Elliot K 
+- **<span style="color:#8C1515;">BOBTHEALIEN2</span>:** Phoenix D
+- **<span style="color:#8C1515;">CommodoreCactus</span>:** Devin P
+- **<span style="color:#8C1515;">uncracked1</span>:** Nathan G
+- **<span style="color:#8C1515;">Itsclarysage</span>:** Clairey
+- **<span style="color:#8C1515;">InAVolcano</span>:** Jackson H
+- **<span style="color:#8C1515;">untyrannicalRex</span>:** Rex D
+- **<span style="color:#8C1515;">TGSTophat</span>:** Oliver K
+- **<span style="color:#8C1515;">BrightWhisper</span>:** Gabriel A
 
-Add your IGN and name under the Waitlist if you want to be added to the server.  
-**ONLY CURRENTLY ENROLLED STUDENTS CAN JOIN THE SERVER. IMPERSONATION OF OTHER STUDENTS IS STRICTLY PROHIBITED.**
+---
 
-You are REQUIRED to put at least your first name and last name alongside your In Game Name (IGN) (example: `LordChumba257: Paul E` - does not have to be full last name).
+### Alumni/Other
+- **<span style="color:#8C1515;">SnakeChamer100</span>:** Jasper's F
+- **<span style="color:#8C1515;">Rudythecat</span>:** Nikolas K
+- **<span style="color:#8C1515;">DrogonWind</span>:** Julie's D
+- **<span style="color:#8C1515;">Microseventy</span>:** Renos L
+- **<span style="color:#8C1515;">scroils</span>:** Left OHS last year
 
-## Currently Whitelisted:
-- **NexoBuilder09:** William G
-- **Wildere:** Greyson W
-- **NMMBS:** Andrew
-- **QuietStorm15:** Shen
-- **RevengeNM:** Nathan M
-- **DreadfireX:** Alexander B
-- **MrSpots:** Taylan D
-- **CageistSplash94:** Jasper 
-- **Pumpkin345:** Julie W    
-- **goattchamp:** Tariq C
-- **Antony926:** Wynn L
-- **Rayik_:** Amari I
-- **Chapter7840:** Jasmine N
-- **Automationman:** Henry H
-- **BlueBlock314:** Tristan S
-- **Jroid27:** Jules M
-- **LordChumba257:** Paul E
-- **pauldonket:** Paul E
-- **NatTheBag:** Han L
-- **GreenAnimal6000:** Julian S
-- **BATTLECHIKEN:** Grady S
-- **aapianist:** Annabella
-- **LordTechnodoggo:** Jonathan
-- **Flyingsaber:** Siddarth 
-- **Fazemacandchees:** Kavin K
-- **The_Blueberry_:** Bobby W
-- **Logbal_:** Maxwell P
-- **Cheemsforbeems:** Johann W
-- **Droffilc314:** Clifford M
-- **LunarWolf9530:** Meera I
-- **Starshine_Storm:** Sophia M
-- **Kendrick_LeBard:** Arin P
-- **The_Duck_King_:** Leonid V
-- **X839:** Amaru W 
-- **TheZardian:** Ariel M
-- **tigeryong10:** Weston Y
-- **luckytimeteller:** Rohan R
-- **JuniorCrafter10:** Aurora G
-- **IroWiz:** Ethan I
-- **HealthyCloud:** Ken Y
-- **AlexJutsu12:** Alex
-- **Tigerseyemax1:** Daniel B
-- **FluffyCloud12:** C.B
-- **QuionaPro73:** Palma B
-- **Spring1962:** Sophia T
-- **FireForestDrago:** Karthik V
-- **Viladdi:** Maddie L 
-- **CoogaCo:** Kyler G
-- **Vision84:** Arnav B
-- **ElvenRayla:** Izzy N
-- **HummusAndGuac:** Harmehel S
-- **TheEnderPlague:** Francisco M
-- **Brokii_official:** Dawn Z
-- **MinerHalo:** Lila S
-- **Avaloby108:** Mateus A
-- **azanide:** Josh T
-- **Pentaria55:** Michael D
-- **Di4rm4d4:** Diana M
-- **Crafter100185:** Torah H
-- **Exeptiomal:** Alexander S
-- **RipFinnick:** Patrick T
-- **matchboxes:** Wika S
-- **SEANWY:** Sean T
-- **TGM_151:** Shan J
-- **literallyM3L:** Melanie Q
-- **Ciniminio:** Nico H
-- **NatKrippled:** Natalie K 
-- **Shreyyyyuh:** Sherri L
-- **Infallibilism:** Elliot K 
-- **BOBTHEALIEN2:** Phoenix D
-- **CommodoreCactus:** Devin P
-- **uncracked1:** Nathan G
-- **Itsclarysage:** Clairey
-- **InAVolcano:** Jackson H
-- **untyrannicalRex:** Rex D
-- **TGSTophat:** Oliver K
-- **BrightWhisper:** Gabriel A
-
-### Alumni/Other:
-- **SnakeChamer100:** Jasper's F
-- **Rudythecat:** Nikolas K
-- **DrogonWind:** Julie's D
-- **Microseventy:** Renos L
-- **scroils:** left OHS last year
+---
 
 ## Waitlist
 
----
-
-## Main Server (play.ohsmp.com)
-
-### WALL OF SHAME
-- **bigbottlerocket:** Patrick W (Justin L) [BANNED for 3 counts of griefing the End, 4 more counts of griefing the End before it was banned, impersonation]
-- **Waddlss:** Justin L [BANNED for the next week due to 3 confirmed counts of hacking, and 3 suspected counts of griefing spawn and spawnkilling] [Unbanned as of 10/19/2024] Banned indefinitely due to impersonation 
-- **doortoes:** alexcrosby [alum] BANNED for griefing spawn
-- **Matchboxes:** Wika S BANNED for griefing spawn
+- Add your IGN and name here to request access.
 
 ---
 
-### Off Limits Areas
-- **Spawn:** You can build there for the competition, but if you are found griefing spawn you will be punished. Buildings are allowed if they are not destructive and contribute to the theme.
-- **My dad's base:** (location is -1580, -1400) Anything in this area is his. He is up to trade stuff if you ask nicely, but if you steal and are caught, you will be banned.
+## Wall of Shame
 
-### Public Bases, Sites & Farms:
-- All builds within 200 blocks of spawn (0, 0)
-- **Spawn farms:**
-  - Moss farm
-  - Tree farm
-  - Fat tree farm
-  - Cobblestone farm
-  - Julie's Dad's base near (-1500, -1400)
-  - Drowned Farm (-400, 900)
-  - Raid Farm (-400, 230)
-  - Creeper Farm (approx. 100 blocks from raid farm)
-  - Ghast Farm (50, -630 nether roof)
-  - Single Gold Farm (-200, -400 nether roof)
-  - Pillager Farm (-200, 1900)
-  - Multi Gold Farm (1800, 0 nether roof)
+### Banned Players
+- **<span style="color:#f44336;">bigbottlerocket</span>:** Justin L  
+  *Reason:* 3 counts of griefing the End, impersonation.
+- **<span style="color:#f44336;">Waddlss</span>:** Justin L  
+  *Reason:* Hacking, griefing spawn, impersonation.
+- **<span style="color:#f44336;">doortoes</span>:** alexcrosby  
+  *Reason:* Griefing spawn.
+- **<span style="color:#f44336;">Matchboxes</span>:** Wika S  
+  *Reason:* Griefing spawn.
 
----
-
-## Factions & Kingdoms
-
-### Kingdom of Wyldera (Disbanded)
-- **Leader of Wyldera:** Wildere
-- **Leader of Inner Wyldera:** SIC MrSpots
-- **Leader of Outer Wyldera:** SIC Meera
-
-**SIC:** MrSpots, LunarWolf  
-**Members:** 12 (wildere, LunarWolf9530, MrSpots, RevengeNM, jroid27, Chapter7840, BlueBlock314, Halo4547, X839, JuniorCrafter10)  
-**Allies:** PFC, Erebor, New Super Paper Mario & Luigi 3D Odyssey U Deluxe: The Thousand-Year Door  
-
-### Outer Wyldera:
-- **Leader:** LunarWolf  
-- **Members:** Revenge, Jroid, X839  
-
-### Inner Wyldera:
-- **Leader:** MrSpots  
-- **Members:** Chapter, Halo4547, BlueBlock, JuniorCrafter  
-
----
-
-### The Hamoodi East Minecraft Company
-- **Team Leader:** Hamood H  
-- **SIC:** Gollum S; Happy E. S  
-- **Members:** 9 (DreadfireX, Rayik_, Goattchamp, logbal_, NatTheBag, cheemsforbeems, Fazemacandchees, Kendrick_LeBard, Hummusandguac)  
-- **Other info:** Invite only  
-- **Allies:** PFC, CageistSplash94  
-- **WAR:** Waddlss Target eliminated  
-
-### PFC
-- **Team Leader:** Vision84  
-- **SIC:** FireForestDrago  
-- **Members:** Starshine_Storm, The_Duck_King_, luckytimeteller, QuietStorm15  
-
-### Spawn
-- **Team Leader:** The_Blueberry_  
-
-### Erebor
-- **Team Leader:** tigeryong10  
-- **SIC:** Wildere, FluffyCloud12  
-- **Members:** Antony426, MrSpots  
-- **Allies:** Wyldera  
-- **WAR:** waddlss, Pentaria55, cooked_cods  
-
----
-
-### Bounty:
-**OTS (Omega Test Site)**
-- **Goofy Ahh Leader:** FluffyCloud12  
-- **Members:** Antony426  
-- **Hitlist:** Pentaria55, cooked_cods, TGM_151, TheZardian, Quietstorm15, MrSpots  
-
----
-
-## Jobs:
-FluffyCloud loves doing random stuff on the OHSMP. You can put other random stuff on this list for me to do by "paying me money."
-
----
-
-### Cooperation of Peaceful Players & New Players (CPPNP)
-- **Team Leader:** TGM_151  
-- **SIC:** —  
-- **Members:** Shreyyyyuh, Jackson H (un tba)  
-- **Pseudomembers:** JuniorCrafter10  
-- **Projects:** Build the school and procure cobblestone  
-
----
-
-### Aesjuian Confederation
-- **Team Leader:** BlueBlock314  
-- **Members:** QuietStorm15, JuniorCrafter10  
-- **Other info:** Open to new members but contact Tristan S to join.  
-
----
-
-### Alliances
-**The Democratic Republic of Cats and Horses**
-- **Leader:** Rudythecat  
-- **SIC:** TheZardian  
-- **Members:** alexjutsu12, TheZardian, invasion155, TGM_151, Microseventy, Rudythecat, BOBTHEALIEN2  
-- **Allies:** Erebor  
-- **WAR:**

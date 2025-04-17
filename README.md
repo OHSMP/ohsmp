@@ -2,6 +2,8 @@
 
 The Official Website of The OHSMP
 
-https://ohsmp.github.io/ohsmp/
+**Website:** https://ohsmp.github.io/ohsmp/
 
-https://github.com/OHSMP/ohsmp
+**GitHub:** https://github.com/OHSMP/ohsmp
+
+**Minecraft Server Address:** `play.ohsmp.com` (only)
